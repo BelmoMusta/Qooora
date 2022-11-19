@@ -1,4 +1,4 @@
-package com.mustabelmo.retrofit.converter;
+package com.mustabelmo.qooora.converter;
 
 import com.fasterxml.jackson.databind.ObjectReader;
 import okhttp3.ResponseBody;
@@ -19,6 +19,8 @@ final class JacksonResponseBodyConverter<T> implements Converter<ResponseBody, T
 		try {
 			Reader src = value.charStream();
 			var2 = this.adapter.readValue(src);
+		} catch (Exception exe) {
+			return null;
 		} finally {
 			value.close();
 		}

@@ -1,25 +1,30 @@
-package com.mustabelmo.retrofit.converter;
+package com.mustabelmo.qooora.converter;
 
-import com.mustabelmo.retrofit.types.Channel;
-import com.mustabelmo.retrofit.types.Commentator;
-import com.mustabelmo.retrofit.types.EventType;
-import com.mustabelmo.retrofit.types.FullMatchList;
-import com.mustabelmo.retrofit.types.Match;
-import com.mustabelmo.retrofit.types.MatchEvent;
-import com.mustabelmo.retrofit.types.Player;
-import com.mustabelmo.retrofit.types.Stadium;
-import com.mustabelmo.retrofit.types.Team;
-import com.mustabelmo.retrofit.utils.Splitter;
+import com.mustabelmo.qooora.types.Channel;
+import com.mustabelmo.qooora.types.Commentator;
+import com.mustabelmo.qooora.types.EventType;
+import com.mustabelmo.qooora.types.FullMatchList;
+import com.mustabelmo.qooora.types.Match;
+import com.mustabelmo.qooora.types.MatchEvent;
+import com.mustabelmo.qooora.types.Player;
+import com.mustabelmo.qooora.types.Stadium;
+import com.mustabelmo.qooora.types.Team;
+import com.mustabelmo.qooora.utils.Splitter;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 public class MatchConverter {
 	public static List<Match> covertToMatches(FullMatchList fullMatchList) {
 		List<Match> matches = new ArrayList<>();
-		String[] matchesList = fullMatchList.getMatchesList();
+		String[] matchesList = Optional
+				.ofNullable(fullMatchList)
+				.map(FullMatchList::getMatchesList)
+				.orElse(new String[0]);
 		
 		for (int i = 0; i < matchesList.length - 19; i += 20) {
 			Match match = new Match();

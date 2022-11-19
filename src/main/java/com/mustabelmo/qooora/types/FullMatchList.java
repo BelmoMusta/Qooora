@@ -1,4 +1,4 @@
-package com.mustabelmo.retrofit.types;
+package com.mustabelmo.qooora.types;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

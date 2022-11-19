@@ -1,6 +1,6 @@
-package com.mustabelmo.retrofit.client;
+package com.mustabelmo.qooora.client;
 
-import com.mustabelmo.retrofit.types.FullMatchList;
+import com.mustabelmo.qooora.types.FullMatchList;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.Query;
@@ -16,12 +16,13 @@ public interface QoooraClient {
 	
 	@GET("/")
 	@Headers("accept: application/json")
-	CompletableFuture<FullMatchList> getFullMatchList(@Query("region") String region, @Query("area") String area,
+	CompletableFuture<FullMatchList> getFullMatchList(@Query("region") String region,
+													  @Query("area") String area,
 													  @Query("ajax") String ajax);
 	
 	@GET("/")
 	@Headers("accept: application/json")
-	CompletableFuture<FullMatchList> getSingleMatch(@Query("m") String matchId, @Query("ajax") String ajax);@GET("/")
-	@Headers("accept: application/json")
-	CompletableFuture<FullMatchList> getSingleMatchNot(@Query("m") String matchId, @Query("ajax") int ajax);
+	CompletableFuture<FullMatchList> getSingleMatch(@Query("m") String matchId,
+													@Query("ajax") int ajax);
+	
 }

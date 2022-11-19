@@ -1,12 +1,12 @@
-package com.mustabelmo.retrofit.types;
+package com.mustabelmo.qooora.types;
 
 public enum EventType {
 	GOAL("g"),
 	RED_CARD("r"),
 	YELLOW_CARD("y"),
 	PENALTY("p"),
-	MISSED_PENALTY("r"), // todo
-	OWN_GOAL("r"),
+	MISSED_PENALTY("m"),
+	OWN_GOAL("o"),
 	
 	;
 	

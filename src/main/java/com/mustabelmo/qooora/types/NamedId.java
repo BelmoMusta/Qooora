@@ -1,4 +1,4 @@
-package com.mustabelmo.retrofit.types;
+package com.mustabelmo.qooora.types;
 
 public abstract class NamedId {
 	private String id;

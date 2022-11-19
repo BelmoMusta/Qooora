@@ -1,4 +1,4 @@
-package com.mustabelmo.retrofit.utils;
+package com.mustabelmo.qooora.utils;
 
 import java.util.Arrays;
 import java.util.List;

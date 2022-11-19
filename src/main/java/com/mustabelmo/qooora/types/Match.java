@@ -1,4 +1,4 @@
-package com.mustabelmo.retrofit.types;
+package com.mustabelmo.qooora.types;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

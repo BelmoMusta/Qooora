@@ -1,4 +1,4 @@
-package com.mustabelmo.retrofit.utils;
+package com.mustabelmo.qooora.utils;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;

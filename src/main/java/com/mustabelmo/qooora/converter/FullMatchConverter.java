@@ -1,4 +1,4 @@
-package com.mustabelmo.retrofit.converter;
+package com.mustabelmo.qooora.converter;
 
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;

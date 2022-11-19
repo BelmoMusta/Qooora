@@ -1,4 +1,4 @@
-package com.mustabelmo.retrofit.types;
+package com.mustabelmo.qooora.types;
 
 public class Channel extends NamedId {
 	private Commentator commentator;
