@@ -29,7 +29,7 @@ public class MatchConverter {
 		for (int i = 0; i < matchesList.length - 19; i += 20) {
 			Match match = new Match();
 			match.setId(matchesList[i + 3]);
-			String time = matchesList[4];
+			String time = matchesList[i+4];
 			long timeInSecondes = Long.parseLong(time);
 			match.setTime(LocalDateTime.ofEpochSecond(timeInSecondes,0, ZoneOffset.UTC));
 			match.setCategoryId(matchesList[i]);
